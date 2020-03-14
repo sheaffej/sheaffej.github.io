@@ -1,4 +1,4 @@
-|![](https://github.com/sheaffej/b2/blob/master/docs/images/20180310/teleop_setup.jpg)|
+|![](/b2/images/20180310/teleop_setup.jpg)|
 |:---:|
 | B2's teleoperation setup|
 
@@ -20,11 +20,11 @@ I created a ROS node (`sensors_node`) to read the output of the ADC chip over SP
 
 Below is what B2 looks like on 10 Mar 2018.
 
-|![B2 on 10 Mar 2018](https://github.com/sheaffej/b2/blob/master/docs/images/20180310/angle2_20180310.jpg)|![B2 on 10 Mar 2018](https://github.com/sheaffej/b2/blob/master/docs/images/20180310/angle1_20180310.jpg)|
+|![B2 on 10 Mar 2018](/b2/images/20180310/angle2_20180310.jpg)|![B2 on 10 Mar 2018](/b2/images/20180310/angle1_20180310.jpg)|
 |:----:|:----:|
 |Front-Right|Rear-Left|
 
-|![B2 front on 10 Mar 2018](https://github.com/sheaffej/b2/blob/master/docs/images/20180310/front_20180310.jpg)|![B2 side on 10 Mar 2018](https://github.com/sheaffej/b2/blob/master/docs/images/20180310/side_20180310.jpg)|
+|![B2 front on 10 Mar 2018](/b2/images/20180310/front_20180310.jpg)|![B2 side on 10 Mar 2018](/b2/images/20180310/side_20180310.jpg)|
 |:----:|:----:|
 |Front|Side|
 
@@ -32,11 +32,11 @@ In the original design, I planned to have the drive wheels in the rear with the 
 
 But when testing using the joystick and `teleop_node` I realized the caster gets stuck on our thicker area rugs and the rear wheel just spin without traction. However if I drove B2 in reverse over the carpet, it climbed right over the rug with no problems. Therefore B2 is now a FWD robot!
 
-|![](https://github.com/sheaffej/b2/blob/master/docs/images/area_rugs.jpg)|
+|![](/b2/images/area_rugs.jpg)|
 |:---:|
 |Area rugs: B2's archenemy|
 
 
 **Lesson learned:** If you aren't yet sure how your robot will work, don't spend much time on cosmetic design. Else it might end up driving backwards like B2 does now.
 
-**Next:** [Initial Autonomous Driving](https://github.com/sheaffej/b2/wiki/Initial-Autonomous-Driving)
+**Next:** [Initial Autonomous Driving](/b2/Initial-Autonomous-Driving)

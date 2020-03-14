@@ -12,7 +12,7 @@ This test used the code as of commit: [e944f0a](https://github.com/sheaffej/b2/t
 
 The Pilot node uses a fairly simple, initial obstacle avoidance planner that follows this algorithm:
 
-![One Sensor Obstacle Navigation](https://github.com/sheaffej/b2/raw/master/design/Obstacle_Navigation-One_Sensor_Flow.png)
+![One Sensor Obstacle Navigation](/b2/images/Obstacle_Navigation-One_Sensor_Flow.png)
 
 As this was the initial robot test, there are clearly lots of things that need improvement. 
 

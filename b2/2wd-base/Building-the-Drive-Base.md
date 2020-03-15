@@ -1,4 +1,5 @@
-Then I built the lower level which contained the drive system. I sourced parts from Pololu, Mouser, Amazon.com, and the local Ace Hardware store.
+# Building the 2-wheel Differential Drive Base
+First I built the lower level which contained the drive system. I sourced parts from Pololu, Mouser, Amazon.com, and the local Ace Hardware store.
 
 Pololu had a big sale during Black Friday 2017, so I picked up a bunch of parts during that sale, including a [Roboclaw 2x7A motor controller](https://www.pololu.com/product/3284). This is the red box on the lower shelf in the design picture above. 
 
@@ -23,7 +24,7 @@ However the `base_node` required me to learn about robot kinematics, some linear
 
 ### Leaning Kinematics, Linear Algebra, and Odometry
 
-Below are some pages that really helped me understand kinematics, linear algebra, and odometry calculations. I read through many dozens of pages on the web, and the ones listed below were those that really stood out for me, and that I referred back to many times as my knowlege grew.
+Below are some pages that really helped me understand kinematics, the related linear algebra, and odometry calculations. I read through many dozens of pages on the web, and the ones listed below were those that really stood out for me, and that I referred back to many times as my knowlege grew.
 
 This paper below by Columbia University helped me understand the fundamental math of Forward and Inverse Kinematics. This introduced me to several terms that I would need to use, but the math here was too far removed from my specific scenario. So I ended up using different equations which are mentioned further below.
 
@@ -49,4 +50,6 @@ This answer below by Christoph Rösmann ultimately was the template I used for m
 
 * [https://answers.ros.org/question/231942/computing-odometry-from-two-velocities/](https://answers.ros.org/question/231942/computing-odometry-from-two-velocities/)
 
-**Next:** [Teleoperation to Obstacle Sensing](/b2/Teleoperation-to-Obstacle-Sensing)
+With the initial base code implemented, it was time to perform real-world testing of the base kinematics using teleoperation.
+
+**Next:** [Teleoperation to Obstacle Sensing](/b2/2wd-base/Teleoperation-to-Obstacle-Sensing)

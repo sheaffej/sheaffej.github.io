@@ -10,10 +10,10 @@ My daughter picked the name **B2**. Prior to this robot, we build a light-follow
 These pages document my journey of designing, building, and modifying B2, as well as generally learning about robotics through this platform.
 
 ### Read More:
-1. [The Initial Design](b2/InitialDesign.md)
-2. [Building the Drive Base](b2/Building-the-Drive-Base.md)
-3. [Teleoperation to Obstacle Sensing](b2/Teleoperation-to-Obstacle-Sensing.md)
-4. [Initial Autonomous Driving](b2/Initial-Autonomous-Driving.md)
+1. [The Initial Design](b2/2wd-base/InitialDesign.md)
+2. [Building the 2-wheel Differential Drive Base](b2/2wd-base/Building-the-Drive-Base.md)
+3. [Teleoperation to Obstacle Sensing](b2/2wd-base/Teleoperation-to-Obstacle-Sensing.md)
+4. [Initial Autonomous Driving](b2/2wd-base/Initial-Autonomous-Driving.md)
 
 
 # Otto - Smart Home Automation

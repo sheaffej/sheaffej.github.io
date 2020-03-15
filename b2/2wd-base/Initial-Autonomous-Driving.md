@@ -1,6 +1,7 @@
+# Initial Autonomous Driving
 _13 Aug 2018_
 
-Today I ran the first real test of B2 driving autonomously using the new Pilot node and the initial obstacle avoidance planner. Until now, I had been using unit and node-level integration tests and ROS tools (Topic Monitor, Pose Viewer, tf_echo, etc) to make sure all the "autonomous" version nodes were working properly. And the last real test on the B2 robot was a teleoperation test where I was controlling B2 using a joystick and my laptop.
+Today I ran the first real test of B2 driving autonomously using the new `pilot_node` and the initial obstacle avoidance planner. Until now, all of my testing of the `pilot_node` code had been using unit and node-level integration tests and ROS tools (Topic Monitor, Pose Viewer, tf_echo, etc) to make sure all of the "autonomous" version nodes were working properly. And the last real world test on the B2 robot was a teleoperation test where I was controlling B2 using a joystick and my laptop.
 
 I was very pleased with the initial results! Below is the video of the initial autonomous test.
 
@@ -10,9 +11,9 @@ I was very pleased with the initial results! Below is the video of the initial a
 
 This test used the code as of commit: [e944f0a](https://github.com/sheaffej/b2/tree/e944f0a4f20038805e9b6f8c4cdf259ed273e4da)
 
-The Pilot node uses a fairly simple, initial obstacle avoidance planner that follows this algorithm:
+The `pilot_node` uses a fairly simple, initial obstacle avoidance planner that follows this algorithm:
 
-![One Sensor Obstacle Navigation](/b2/images/Obstacle_Navigation-One_Sensor_Flow.png)
+![One Sensor Obstacle Navigation](/b2/images/2wd-base/Obstacle_Navigation-One_Sensor_Flow.png)
 
 As this was the initial robot test, there are clearly lots of things that need improvement. 
 
@@ -61,3 +62,5 @@ https://github.com/sheaffej/b2/commit/67234b842a3280dd32a838978d76fae568c4c22b
 And here is B2 navigating the kitchen after the parameter changes. Much better!!!
 
 [![B2 follow-on kitchen test (19 Aug 2018)](https://img.youtube.com/vi/rDFhwQ56HUw/0.jpg)](https://www.youtube.com/watch?v=rDFhwQ56HUw)
+
+**Next:** [Rethinking the Design](/b2/4wd-base/rethinking-the-design.md)

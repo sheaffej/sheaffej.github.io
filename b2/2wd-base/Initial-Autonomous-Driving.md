@@ -63,4 +63,4 @@ And here is B2 navigating the kitchen after the parameter changes. Much better!!
 
 [![B2 follow-on kitchen test (19 Aug 2018)](https://img.youtube.com/vi/rDFhwQ56HUw/0.jpg)](https://www.youtube.com/watch?v=rDFhwQ56HUw)
 
-**Next:** [Rethinking the Design](/b2/4wd-base/rethinking-the-design.md)
+**Next:** [Rethinking the Design](/b2/4wd-base/rethinking-the-design)

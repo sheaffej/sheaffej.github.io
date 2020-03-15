@@ -34,4 +34,4 @@ I looked into driving 4 wheels with the single Roboclaw 2x7a, and some people ha
 
 To power the NUC, I needed 12v to 19v DC. For the initial B2, I was using batteries from my R/C car which were 7.2v 6-cell NiMH batteries. So I decide to just wire up two of these in series to give me 14.4v DC.
 
-**Next:** [Moving to Docker](/b2/4wd-base/moving-to-docker.md)
+**Next:** [Moving to Docker](/b2/4wd-base/moving-to-docker)

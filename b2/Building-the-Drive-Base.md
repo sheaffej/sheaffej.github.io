@@ -49,4 +49,4 @@ This answer below by Christoph Rösmann ultimately was the template I used for m
 
 * [https://answers.ros.org/question/231942/computing-odometry-from-two-velocities/](https://answers.ros.org/question/231942/computing-odometry-from-two-velocities/)
 
-**Next:** [Teleoperation to Obstacle Sensing](https://github.com/sheaffej/b2/wiki/Teleoperation-to-Obstacle-Sensing)
+**Next:** [Teleoperation to Obstacle Sensing](/b2/Teleoperation-to-Obstacle-Sensing)

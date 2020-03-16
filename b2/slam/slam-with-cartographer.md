@@ -14,14 +14,16 @@ But those docs don't really explain the concepts very well. What is a submap? A 
 
 Reading through the [original paper](https://research.google.com/pubs/pub45466.html) by Google helps fill in some more of the gaps, but it's mostly the math behind the algorithms.
 
-It wasn't until I started trying to get a decent map that I really understood the concepts. I'll summarize the main concepts that I learned while tuning in the section below. Then on the next page I'll discuss what I learned about the tuning process specifically.
+It wasn't until I started trying to get a decent map that I really understood the concepts. I'll summarize the main concepts that I learned in the section below. Then on the next page I'll discuss what I did and learned about tuning Cartographer so it builds a good map.
 
 ## My Cartographer Primer
 The docs are clear to point out that Cartographer has two main parts:
 * Local SLAM
 * Global SLAM
 
-What it doesn't really state clearly is that Local SLAM's job is to create small pieces of the map (called submaps), and then Global SLAM fits them together like pieces in a large puzzle. The submaps are "glued" together like pieces of paper laid out on a table top using Constraints. Constraints are the glue, and describe how one submap is positined and glued to another submap. All these submaps glued together make the map.
+What it doesn't explain clearly is that Local SLAM's job is to create small pieces of the map (called submaps), and connect neighboring submaps together as it draws the map. The connection of neighboring submaps is called the Trajectory. Then Global SLAM periodically optimizes the submap arrangement to find where submaps overlap (i.e. cover the same part of the map) and connects them - this is alled loop closure. 
+
+You can think of the submaps as pieces of a paper map laid out on a table top, and then "glued" together. The glue in Cartographer is called the Constraints which describe how one submap is positined and glued to another submap. All these submaps glued together make the map.
 
 Here is a good diagram I found in the paper _[Multi-Robot 6D Graph SLAM Connecting Decoupled Local Reference Filters](https://elib.dlr.de/100757/1/multirobot_slam_v2.4_href_header.pdf)_.
 
@@ -55,11 +57,9 @@ Let's zoom out a bit on our map.
 
 ![](/b2/images/slam/bad-local-slam.png)
 
-We can see here that as the robot moved around, its position drifted. And the laser scan mapping drew walls in newer submaps in different positions than previous submaps. 
+We can see here that as the robot moved around, its position drifted. And the laser scan mapping drew walls in newer submaps in different positions than previous submaps. This is a problem with Local SLAM that needs to be fixed by tuning Cartographer.
 
-This is a problem with Local SLAM. Specifically, when a submap is created, it should be matched (i.e. aligned) to other submaps near that area. In the picture above, the new submaps were not aligned well with the previous submaps, so the new scans created walls offset from the previous submaps.
-
-We'll see in the tuning section that matching the submaps during Local SLAM is the first challenge we need to address. Once we have that working well, we can move on to tunig Global SLAM. But in the map above, we still have a lot of work to do on Local SLAM.
+We'll see in the tuning section that generating good submaps during Local SLAM is the first challenge we need to address. Once we have that working well, we can move on to tunig Global SLAM. But in the map above, we still have a lot of work to do on Local SLAM.
 
 Global SLAM then works to re-align how the submaps are glued together, specifically with regards to loop closure.
 

@@ -2,7 +2,7 @@
 
 ![](/b2/images/Docker-Moby-logo_150px.png) ![](/b2/images/ROS_logo_150px.png)
 
-_Dec 2019_
+_December 2019_
 
 When I started the B2 project, the latest stable ROS release was [Kinetic](http://wiki.ros.org/kinetic) which was release in May 2016. Now, ROS [Melodic](http://wiki.ros.org/melodic) is available and has been GA since May 2018. Also ROS2 is appearing on the horizion, so eventually I would want to make that jump also. But ROS2 is still changing rapidly, and a lot of the ROS nodes I want to use are not yet ported over to ROS2, so I'll hold off on ROS2 for now.
 
@@ -38,3 +38,4 @@ For example, I will have docker images for:
 > * **`b2-dev`**: Contains all of the libraries, scripts, and nodes that I use on my laptop when operating and testing the robot. This is essentially my "control plane" for the robot.
 > * **`b2-rosmaster`**: This is a simple Docker container that I run on a remote node that runs the ROS master. I keep this running on the same computer all the time, and then configure all of the other containers to connect to this computer as their ROS master.
 
+**Next:** [I finally came to my RealSense(s)](/b2/4wd-base/intel-realsense)

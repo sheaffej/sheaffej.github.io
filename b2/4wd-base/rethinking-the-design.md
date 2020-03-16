@@ -1,5 +1,5 @@
 # Rethinking the Design
-_Sep 2019_
+_September 2019_
 
 After successfully making the initial B2 drive autonomously and avoid obstacles (in a similar fashion to a Roomba robotic vacuum does) I started thinking about how to make it find a person who is hiding. 
 

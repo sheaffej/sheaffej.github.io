@@ -65,8 +65,8 @@ Global SLAM then works to re-align how the submaps are glued together, specifica
 
 Loop closure is when the robot moves around, and then revisits a part of the map that it visited before. Global Slam identifies these overlaps, and builds constrains (i.e. glue) to fix those similar submaps together. Look back above at Fig 4. The yellow line between the two similar gray submaps is the work of Global SLAM "constraining" those two submaps together.
 
-Now that we have a basic conceptual understand of Cartographer, we need to tun Local and Global SLAM so our map gets better than what we have above.
+Now that we have a basic conceptual understand of Cartographer, we need to tune Local and Global SLAM so our map gets better than what we have above.
 
-BTW, the map above was actually after a lot of tuning already. My first maps looked like a giant swirled hurricane. The map was so twisted and smashed together you couldn't make our any room at all.
+BTW, the map above was after a lot of tuning already. My first maps looked like a giant swirled hurricane. The map was so twisted and smashed together you couldn't make out any room at all.
 
 **Next:** [Tuning Cartographer](/b2/slam/tuning-cartographer) 

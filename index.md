@@ -23,8 +23,8 @@ This is a general purpose automation engine that integrates with [Home Assistant
 
 There are two projects for Otto:
 * `otto-engine`
-  * https://github.com/sheaffej/otto-engine
+  * [](https://github.com/sheaffej/otto-engine)
   * Python rules engine using asyncio
 * `otto-ui`
-  * https://github.com/sheaffej/otto-ui
+  * [](https://github.com/sheaffej/otto-ui)
   * Angular 2+ Web UI for buiding and managing rules

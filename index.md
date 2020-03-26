@@ -1,3 +1,6 @@
+---
+title: sheaffej's Projects
+---
 # B2 Robot Project (ROS)
 
 This is my ROS project consisting of the custom code for my robot named **B2**.

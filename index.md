@@ -12,6 +12,7 @@ This is my ROS project consisting of the custom code for my robot named **B2**.
 5. [Rethinking the Design](b2/4wd-base/rethinking-the-design)
 6. [Moving to Docker](b2/4wd-base/moving-to-docker)
 7. [I finally came to my RealSense(s)](b2/4wd-base/intel-realsense)
+8. [SLAM with Google Cartographer](b2/slam/slam-with-cartographer)
 
 
 # Otto - Smart Home Automation

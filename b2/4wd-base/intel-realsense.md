@@ -29,7 +29,7 @@ It took some work to get the D435 RealSense camera working on the Raspberry Pi 4
 
 After a lot of trial and error (__emphasis on a lot__), I eventually succeeded in creating a Docker image that runs the Intel [`realsense-ros`](https://github.com/IntelRealSense/realsense-ros) node on the Raspberry Pi 4, with Raspbian as the host OS.
 
-Originally I tried runing Ubuntu 19.10 server on the Pi since there were RealSense docs on how to run the libraries on Ubuntu. But ultimately, I hit a kernel incompatibility that resulted in periodic instability of the Pi when running the RealSense camera. This led me back to the official Raspbian OS, running a Docker container of Ubuntu 18.04 LTS. 
+Originally I tried running Ubuntu 19.10 server on the Pi since there were RealSense docs on how to run the libraries on Ubuntu. But ultimately, I hit a kernel incompatibility that resulted in periodic instability of the Pi when running the RealSense camera. This led me back to the official Raspbian OS, running a Docker container of Ubuntu 18.04 LTS. 
 
 To see what I did to get it all working, just check out the [Dockerfile](https://github.com/sheaffej/ros-realsense/blob/master/Dockerfile) in my [`ros-realsense`](https://github.com/sheaffej/ros-realsense) repo.
 

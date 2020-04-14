@@ -25,14 +25,14 @@ Ultimately, I decided on creating one docker image per "role" in the ROS node to
 
 For example, I will have docker images for:
 * _b2-base_: The code and nodes that drive the base. These will run on the robot's onboard computer.
-* _b2-dev_: The code and nodes that will on my laptop like RViz, teleop_node, etc.
+* _b2-dev_: The code and nodes that will run on my laptop like RViz, teleop_node, etc.
 * _b2-nav_: The code and nodes that handle the navigation of the robot. This may run on the robot, or I may put it on a remote computer for better performance.
 
 
 > _Update 15 Mar 2020_  
 > Jumping forward in time, I have a lot of Docker images now:  
 > * **`b2-base`**: Contains my `base_node`, my IR `sensors_node`, and the `roboclaw_driver` nodes. This runs on the robot.
-> * **`ros-realsense`**: Contains the librarires and nodes for operating the Intel Realsense camera. This also runs on the robot.
+> * **`ros-realsense`**: Contains the libraries and nodes for operating the Intel Realsense camera. This also runs on the robot.
 > * **`b2-imu`**: Contains the libraries and nodes for publishing the onboard IMU sensor data. This also runs on the robot. I may fold this into the `b2-base` Docker, but for now I'm keeping is separate since it has its own set of library dependenices that need to be compiled from source. This keeps the `b2-base` and `b2-imu` images cleaner and more decoupled. 
 > * **`b2-slam`**: Contains libraries and nodes for Google Cartographer for SLAM. This runs on a remote computer that has a lot more CPU processing power that what is available onboard on the robot.
 > * **`b2-dev`**: Contains all of the libraries, scripts, and nodes that I use on my laptop when operating and testing the robot. This is essentially my "control plane" for the robot.

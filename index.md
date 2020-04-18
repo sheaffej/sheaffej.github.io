@@ -16,7 +16,7 @@ This is my ROS project consisting of the custom code for my robot named **B2**.
 6. [Moving to Docker](b2/4wd-base/moving-to-docker)
 7. [I finally came to my RealSense(s)](b2/4wd-base/intel-realsense)
 8. [SLAM with Google Cartographer](b2/slam/slam-with-cartographer)
-
+9. [Tuning Cartographer](/b2/slam/tuning-cartographer)
 
 # Otto - Smart Home Automation
 Otto is an automation engine for [Home Assistant](https://www.home-assistant.io/).

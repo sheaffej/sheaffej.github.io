@@ -1,0 +1,31 @@
+{% for section in site.data.nav.toc %}
+    <h2 class="nav">{{ section.title }}</h2>
+    <ul>
+        {% for item in section.items %}
+            <li class="{% if item.url == page.url %}nav-active{% else %}nav-inactive{% endif %}">
+                <a href="{{ item.url }}">{{ item.page }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+
+<hr />
+
+<h2 class="nav">Projects on GitHub</h2>
+<h3>B2 ROS Robot</h3>
+<ul>
+    <li><a href="https://github.com/sheaffej/b2-base">b2-base</a></li>
+    <li><a href="https://github.com/sheaffej/roboclaw_driver">roboclaw_driver</a></li>
+    <li><a href="https://github.com/sheaffej/ros-realsense">ros-realsense</a></li>
+    <li><a href="https://github.com/sheaffej/b2_description">b2_description</a></li>
+    <li><a href="https://github.com/sheaffej/b2-slam">b2-slam</a></li>
+    <li><a href="https://github.com/sheaffej/b2-imu">b2-imu</a></li>
+    <li><a href="https://github.com/sheaffej/b2-dev">b2-dev</a></li>
+    <li><a href="https://github.com/sheaffej/b2-rosmaster">b2-rosmaster</a></li>
+</ul>
+<h3>Otto Smart Home Automation Engine</h3>
+<ul>
+    <li><a href="https://github.com/sheaffej/otto-engine">otto-engine</a></li>
+    <li><a href="https://github.com/sheaffej/otto-ui">otto-ui</a></li>
+</ul>
+

@@ -1,0 +1,28 @@
+toc:
+  - title: B2 ROS Robot
+    items:
+      - page: The Initial Design
+        url: /b2/2wd-base/InitialDesign.html
+      - page: Building the 2-wheel Differential Drive Base
+        url: /b2/2wd-base/Building-the-Drive-Base.html
+      - page: Teleoperation to Obstacle Sensing
+        url: /b2/2wd-base/Teleoperation-to-Obstacle-Sensing.html
+      - page: Initial Autonomous Driving
+        url: /b2/2wd-base/Initial-Autonomous-Driving.html
+      - page: Rethinking the Design
+        url: /b2/4wd-base/rethinking-the-design.html
+      - page: Moving to Docker
+        url: /b2/4wd-base/moving-to-docker.html
+      - page: I finally came to my RealSense(s)
+        url: /b2/4wd-base/intel-realsense.html
+      - page: SLAM with Google Cartographer
+        url: /b2/slam/slam-with-cartographer.html
+      - page: Tuning Cartographer
+        url: /b2/slam/tuning-cartographer.html
+
+  - title: Otto Smart Home Automation
+    items:
+    - page: otto-engine
+      url: https://github.com/sheaffej/otto-engine/blob/master/README.md
+    - page: otto-ui
+      url: https://github.com/sheaffej/otto-ui/blob/master/README.md

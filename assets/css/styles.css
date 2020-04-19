@@ -1,0 +1,16 @@
+li.nav-active a {
+    /* color: #3478c6; */
+    font-weight: bold;
+}
+li.nav-inactive a {
+    color: #666;
+    font-weight: normal;
+}
+
+h1.site-title {
+    font-size: 36px;
+}
+
+h2.nav {
+    font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+}

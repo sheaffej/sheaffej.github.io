@@ -1,11 +1,27 @@
 ---
 title: sheaffej's Projects
 ---
+
+# Recovery Robot B2 (R2-B2)
+
+R2-B2 is the next phase of my robot project which builds upon the B2 robot. 
+
+It's design goal is to autonomously navigate around the floor looking for cat toys of various types, pick them up, and deliver them to a central storage spot (i.e where we continually put them, just so the cat can spread them all over again).
+
+This project was started Oct 2020.
+
+![](r2b2/images/r2b2-artists-concept.png)
+
+### Read More:
+1. [Design Goals](r2b2/initial-design/design-goals)
+
+---
+
 # B2 Robot Project (ROS)
 
 This is my ROS project consisting of the custom code for my robot named **B2**.
 
-![](b2/images/b2_mar_2020_300px.jpg)
+![](b2/images/b2_oct_2020_400px.jpeg)
 
 ### Read More:
 1. [The Initial Design](b2/2wd-base/InitialDesign)
@@ -17,6 +33,10 @@ This is my ROS project consisting of the custom code for my robot named **B2**.
 7. [I finally came to my RealSense(s)](b2/4wd-base/intel-realsense)
 8. [SLAM with Google Cartographer](b2/slam/slam-with-cartographer)
 9. [Tuning Cartographer](/b2/slam/tuning-cartographer)
+10. [Navigation with move_base](/b2/nav/nav-with-move_base)
+11. [Wrapping up the B2 project](/b2/nav/wrapping-up)
+
+---
 
 # Otto - Smart Home Automation
 Otto is an automation engine for [Home Assistant](https://www.home-assistant.io/).

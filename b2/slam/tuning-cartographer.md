@@ -44,4 +44,4 @@ I only [changed](https://github.com/sheaffej/b2-nav/blob/4cc5fcce4ba82638980a722
 
 After creating the map, I saved it using `slam-toolbox`'s `/slam_toolbox/save_map` service, which saves a `.pgm` and `.yaml` file containing the map as an occupancy grid.
 
-**Next:** [Navigation with `move_base`](/b2/nav/nav-with-move_base) 
+**Next:** [Navigation with move_base](/b2/nav/nav-with-move_base) 

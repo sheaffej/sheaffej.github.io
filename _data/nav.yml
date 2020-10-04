@@ -1,4 +1,10 @@
 toc:
+
+  - title: R2-B2 Robot
+    items:
+      - page: Design Goals
+        url: /r2b2/initial-design/design-goals
+
   - title: B2 ROS Robot
     items:
       - page: The Initial Design
@@ -19,6 +25,10 @@ toc:
         url: /b2/slam/slam-with-cartographer.html
       - page: Tuning Cartographer
         url: /b2/slam/tuning-cartographer.html
+      - page: Navigation with move_base
+        url: /b2/nav/nav-with-move_base
+      - page: Wrapping up the B2 project
+        url: /b2/nav/wrapping-up
 
   - title: Otto Smart Home Automation
     items:

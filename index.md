@@ -2,7 +2,7 @@
 title: sheaffej's Projects
 ---
 
-# Recovery Robot B2 (R2-B2)
+<!-- # Recovery Robot B2 (R2-B2)
 
 R2-B2 is the next phase of my robot project which builds upon the B2 robot. 
 
@@ -15,7 +15,7 @@ This project was started Oct 2020.
 ### Read More:
 1. [Design Goals](r2b2/initial-design/design-goals)
 
----
+--- -->
 
 # B2 Robot Project (ROS)
 

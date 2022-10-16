@@ -1,5 +1,5 @@
 # Converting to ROS2
-_Oct 2022_
+_October 2022_
 
 ## Re-using the B2 platform
 The B2 robot could autonomously move around the downstairs floor when given a goal pose. I will be building upon this platform with R2B2, adding computer vision (CV) object detection to detect cat toys lying around, an arm to pick up the cat toys, and some form of controller that decides where to go and what to do. This new controller (yet to be determined exactly what it will consist of) will be setting the goal pose programmatically, instead of me manually setting the goal pose in Rviz with B2 .

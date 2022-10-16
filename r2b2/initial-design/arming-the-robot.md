@@ -5,10 +5,10 @@ I mean, putting an arm on it - I'm not a monster!
 
 And as I thought about how to evolve the B2 robot into the R2B2 robot, I identified two main things I would have to learn and build:
 
-1) A computer vision object detection capability to detect the cat toys and localize them within the world frame
-2) An arm and related control software to pick up the cat toys, and hold them until they can be dropped at the target location
+- A computer vision object detection capability to detect cat toys and localize them within the world frame
+- An arm and related control software to pick up the cat toys, and hold them until they can be dropped at the target location
 
-I decided to tackle the arm part first since the computer vision object detection part seemed more intimidating (later, I would learn it's actually the opposite). 
+I decided to tackle the arm part first since the computer vision object detection part seemed more intimidating. Later, I would learn it's actually the opposite. 
 
 I spent some time finding robotic arm parts that I could obtain through buying or building. Many robot arms are availble for purchase, but most of them either are very expensive, or part of some toy and not really suitable for a working robot. Ultimately I found a 3D model I was able to 3D print. I purchased some servors and started playing around with ROS's MoveIt Motion Planning Framework.
 
@@ -17,24 +17,31 @@ I spent some time finding robotic arm parts that I could obtain through buying o
 Parts list:
 <div style="border: 1px dashed; padding: 5px 10px 0px 10px; margin-bottom: 10px">
 
-I obtained the 3D model from here: https://thangs.com/designer/m/3d-model/38899
-
-And use these large servos: [Amazon link](https://www.amazon.com/gp/product/B07F7YZW7Q/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1)
-
-And these small servos: [Amazon link](https://www.amazon.com/gp/product/B07MLR1498/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
-
-And used this I2C servo driver motor: https://www.adafruit.com/product/815
-
-And this USB-to-I2C board https://www.adafruit.com/product/2264
+<p>
+I obtained the 3D model from here: <a href="https://thangs.com/designer/m/3d-model/38899">https://thangs.com/designer/m/3d-model/38899</a>
+</p>
+<p>
+And use these large servos: <a href="https://www.amazon.com/gp/product/B07F7YZW7Q/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1">Amazon link</a>
+</p>
+<p>
+And these small servos: <a href="https://www.amazon.com/gp/product/B07MLR1498/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1">Amazon link</a>
+</p>
+<p>
+And used this I2C servo driver motor: <a href="https://www.adafruit.com/product/815">https://www.adafruit.com/product/815</a>
+</p>
+<p>
+And this USB-to-I2C board <a href="https://www.adafruit.com/product/2264">https://www.adafruit.com/product/2264</a>
+</p>
 </div>
 
 
 In doing so, I learned a few things:
 
-* The ROS MoveIt motion planning framework is awesome! 
+**The ROS MoveIt motion planning framework is awesome!**
 
-Assuming you know where the object is that you want to pick up, MoveIt does all the work of planning the commands to your actuators to put the arm in the righ position to pick up the object
-* The mechanical engineering part of the arm is by far more difficult than the software part
+Assuming you know where the object is that you want to pick up, MoveIt does all the work of planning the commands to your actuators to put the arm in the right position to pick up the object.
+
+**The mechanical engineering part of the arm is by far more difficult than the software part**
 
 Largely in part because MoveIt does the vast majority of the work for you. But also, it's easy to design an arm that looks great, but when you build it the weight of the parts and the size of the arm can make it infeasible to use. Specifically, when the arm stretches out to pick something up, it has all of its weight forward of its mount point on the robot. Not only does this mean the robot is likely to tip forward because of the shift the center of gravity, but also all of that arm weight needs to be overcome by the servos when moving the arm.
 

@@ -2,13 +2,16 @@
 title: sheaffej's Projects
 ---
 
-# Recovery Robot B2 (R2-B2)
+# Recovery Robot B2 (R2B2)
 
-R2-B2 is the next phase of my robot project which builds upon the B2 robot. 
+R2B2 is the next phase of my robot project which builds upon the B2 robot. 
 
-It's design goal is to autonomously navigate around the floor looking for cat toys of various types, pick them up, and deliver them to a central storage spot (i.e where we continually put them, just so the cat can spread them all over again).
+Its design goal is to autonomously navigate around the floor looking for cat toys of various types, pick them up, and deliver them to a central storage spot (i.e where we continually put them, just so the cat can spread them all over again).
 
-![](r2b2/images/r2b2-artists-concept.png)
+![](r2b2/images/r2b2-artists-concept.png)  
+_(Artist's concept created by my daughter)_
+
+R2B2 is a ROS2 robot, built upon the autonomous navigation platform that I built as the B2 robot with ROS1. This robot will add computer vision (CV) object detection, some form of arm and end-effector to pick up the cat toys, and control logic to perform its task autonomously.
 
 ### Read More:
 1. [Design goals](r2b2/initial-design/design-goals)
@@ -23,6 +26,8 @@ It's design goal is to autonomously navigate around the floor looking for cat to
 This is my ROS project consisting of the custom code for my robot named **B2**.
 
 ![](b2/images/b2_oct_2020_400px.jpeg)
+
+The B2 robot was my first attempt to build a fully ROS robot platform that could navigate around the downstairs of my house autonomously when provided a starting pose and a goal pose. The robot uses SLAM and LIDAR for mapping, AMCL for localization, and ROS `move_base` for navigational planning. It has a custom `base_node` and `roboclaw_driver` node that I implemented using Python and `rospy`.
 
 ### Read More:
 1. [The Initial Design](b2/2wd-base/InitialDesign)

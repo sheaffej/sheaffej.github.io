@@ -1,6 +1,5 @@
-# Design Goals
-
-## Recovery Robot - B2 (R2-B2)
+# Design Goals - Recovery Robot B2 (akam R2B2)
+_October 2020_
 
 ![](../images/r2b2-artists-concept.png)  
 _(Artist's concept created by my daughter)_
@@ -30,3 +29,5 @@ Let's define the goals of the robot:
 A. __Determine when it has completed its task__. And return to a defined location and then shutdown to conserve its battery.
 
 With these goals in mind, our next step is to work on an initial structural design.
+
+**Next:** [Arming the robot](/r2b2/initial-design/arming-the-robot.md)

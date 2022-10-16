@@ -14,7 +14,7 @@ It's design goal is to autonomously navigate around the floor looking for cat to
 1. [Design goals](r2b2/initial-design/design-goals)
 2. [Arming the robot](r2b2/initial-design/arming-the-robot)
 3. [Object detection - Part 1](r2b2/initial-design/yolo-obj-detection-1)
-4. [Conversion to ROS2](r2b2/initial-design/ros2-conversion)
+4. [Converting to ROS2](r2b2/conversion/roboclaw-and-base)
 
 ---
 

@@ -152,6 +152,8 @@ The `plainball` was detected at a much higher 96% probability, and the fluff clu
 ![](/r2b2/images/yolov5-detections/IMG_5871.png)
 And finally, the `stringball` was correctly identified, again at high probability.
 
-And this was all after just a single training run of 50 epochs. I'm sure I can improve the model by improving the training images and hyperparameter tuning. But these results are good enough that I can use the model as-is for my next phases of the robot development.
+And this was all after a single training run of 50 epochs. I'm sure I can improve the model by improving the training images and hyperparameter tuning. But these results are good enough that I can use the model as-is for my next phases of the robot development.
 
 So now it's time to start working on converting the previous B2 nodes that are ROS1 nodes, into R2B2 ROS2 nodes.
+
+**Next:** [Converting to ROS2](/r2b2/conversion/roboclaw-and-base)

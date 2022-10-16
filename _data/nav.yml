@@ -4,6 +4,13 @@ toc:
     items:
       - page: Design Goals
         url: /r2b2/initial-design/design-goals
+      - page: Arming the robot
+        url: /r2b2/initial-design/arming-the-robot
+      - page: Object detection - Part 1
+        url: /r2b2/initial-design/yolo-obj-detection-1
+      - page: Converting to ROS2
+        url: /r2b2/conversion/roboclaw-and-base
+      
 
   - title: B2 ROS Robot
     items:

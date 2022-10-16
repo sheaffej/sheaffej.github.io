@@ -11,7 +11,10 @@ It's design goal is to autonomously navigate around the floor looking for cat to
 ![](r2b2/images/r2b2-artists-concept.png)
 
 ### Read More:
-1. [Design Goals](r2b2/initial-design/design-goals)
+1. [Design goals](r2b2/initial-design/design-goals)
+2. [Arming the robot](r2b2/initial-design/arming-the-robot)
+3. [Object detection - Part 1](r2b2/initial-design/yolo-obj-detection-1)
+4. [Conversion to ROS2](r2b2/initial-design/ros2-conversion)
 
 ---
 

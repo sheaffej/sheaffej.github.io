@@ -1,4 +1,4 @@
-# Design Goals - Recovery Robot B2 (akam R2B2)
+# Design Goals - Recovery Robot B2 (aka R2B2)
 _October 2020_
 
 ![](../images/r2b2-artists-concept.png)  
@@ -30,4 +30,4 @@ A. __Determine when it has completed its task__. And return to a defined locatio
 
 With these goals in mind, our next step is to work on an initial structural design.
 
-**Next:** [Arming the robot](/r2b2/initial-design/arming-the-robot.md)
+**Next:** [Arming the robot](/r2b2/initial-design/arming-the-robot)

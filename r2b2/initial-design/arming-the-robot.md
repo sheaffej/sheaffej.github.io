@@ -46,4 +46,4 @@ So I'm pausing the work on the arm, and I'll switch to the task of cat toy objec
 
 My intention at that point is to brush up on my Fusion 360 skills and start modeling an arm that will work specifically with my robot. I may decide to print the arm myself, or I may send it out for printing. I've learned that 3D printing services can be fairly economical if you can afford to wait (or if you need large quantities). But if you need a small job done quickly, that becomes very expensive. Fortunately, I'm not in a hurry with my project, so I can use time to reduce the cost of professional fabrication of my arm parts.
 
-**Next:** [Object Detection - Part 1](/r2b2/initial-design/yolo-obj-detection.md)
+**Next:** [Object Detection - Part 1](/r2b2/initial-design/yolo-obj-detection-1)

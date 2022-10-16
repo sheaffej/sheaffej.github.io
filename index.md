@@ -2,20 +2,18 @@
 title: sheaffej's Projects
 ---
 
-<!-- # Recovery Robot B2 (R2-B2)
+# Recovery Robot B2 (R2-B2)
 
 R2-B2 is the next phase of my robot project which builds upon the B2 robot. 
 
 It's design goal is to autonomously navigate around the floor looking for cat toys of various types, pick them up, and deliver them to a central storage spot (i.e where we continually put them, just so the cat can spread them all over again).
-
-This project was started Oct 2020.
 
 ![](r2b2/images/r2b2-artists-concept.png)
 
 ### Read More:
 1. [Design Goals](r2b2/initial-design/design-goals)
 
---- -->
+---
 
 # B2 Robot Project (ROS)
 

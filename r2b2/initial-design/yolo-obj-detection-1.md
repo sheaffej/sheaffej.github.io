@@ -102,13 +102,16 @@ I tried various other hyperparameter settings. I didn't have access to a powerfu
 I had some luck with tuning `batch_size`. Lower values yielded lower training loss, but also higher overfitting. I realized that with my 40k+ augmented image set, I had a lot of highly distorted object images. So I reconfigured my albumentations script to only produce non-distorted image augmentations. This brought the image set down to about 20,000 images, simply because I was running out of ways I could augment any one of my original 576 images.
 
 But ultimately, I wasn't able to get the loss curves to improve much.
-![](/r2b2/images/wandb/yolov3-various-non-tiny.jpg)
+<!-- ![](/r2b2/images/wandb/yolov3-various-non-tiny.jpg) -->
+<img src="../images/wandb/yolov3-various-non-tiny.jpg" height="300" />
+
 
 Then it dawned on me. The author of of the YOLOv3 model I was using created both a regular YOLOv3 model with the typicaly 3 YOLO layers, but also a YOLOv3-tiny model with only two layers. Everything I had read about YOLOv3 used the regular model, but also everything I read was using large, many-class image sets like the COCO dataset. If overfitting is my problem, I'm probably using a model that is too complex for my use case.
 
 So I re-configured my scripts to use the YOLOv3-tiny model.
 
-![](/r2b2/images/wandb/yolov3-tiny.jpg)
+<!-- ![](/r2b2/images/wandb/yolov3-tiny.jpg) -->
+<img src="../images/wandb/yolov3-tiny.jpg" height="300" />
 
 This indeed dropped the losses, but the model is still overfitting quite a bit. I tried increasing `batch_size` to help regularize the training, and tried the larger 40K augmented image set again to help generalize the model, but it still was overfitting. And when I ran the test images through the model for detection, the accuracy was about the same as when I first started training with this model.
 

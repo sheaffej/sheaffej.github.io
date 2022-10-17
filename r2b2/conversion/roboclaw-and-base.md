@@ -11,11 +11,11 @@ Having read through the documentation about migrating ROS1 nodes to ROS2, I like
 
 One big difference is ROS2's move away from the ROS master node, and relying on multicast. At first, I was VERY surprised by this change. The software industry has largely moved away from using multicast because it is problematic to support across different networks. That is, all of the network segments between clients need to support multicast, and many network administrators disable multicast for security reasons. 
 
-My initial reaction was wondering if the ROS2 designers were out of touch with the general software/networking industry, being more focused on research projects where they can create an ideal network environment, vs. a real-world deployment environment where robots need to operate on existing networks. However as I read more, I realized that the driving motivation was to make the inter-node communications more efficient and lower latency, especially for higher data streams between nodes (i.e. images, video, point clouds, etc). With ROS1, if two nodes subscribed to the same image topic, the images would be sent twice across the network in two separate TPC socket connections. But with multicast, the publisher sends it once, it traverses the network once, and any interested nodes receive it. And what if 100 nodes subscribe to that image topic? In ROS1, that would be a significant network load, but in ROS2 with multicast, it's only one image across the network at a time.
+At first, I couldn't understand why the ROS2 designers would make such a decision to use a problematic networking technology in a "modern" robotics platform. However as I read more, I realized that the driving motivation was to make the inter-node communications more efficient and lower latency, especially for higher data streams between nodes (i.e. images, video, point clouds, etc). With ROS1, if two nodes subscribed to the same image topic, the images would be sent twice across the network in two separate TPC socket connections. But with multicast, the publisher sends it once, it traverses the network once, and any interested nodes receive it. And what if 100 nodes subscribe to that image topic? In ROS1, that would be a significant network load, but in ROS2 with multicast, it's only one image across the network at a time.
 
-OK...this makes sense, and I see how the performance of more complex and sophisticated robot platforms with richer and higher data rate streams need a more efficient inter-node communication protocol. And, the ROS2 designers did architect the system so that the underlying communication middleware could be swapped out. Therefore if folks needed a non-multicast way of connecting nodes, they could implement a custom middleware that works in their specific environment.
+OK...this makes sense, and I see how the performance of more complex and sophisticated robot platforms with richer and higher data rate streams needs a more efficient inter-node communication protocol. And, the ROS2 designers did architect the system so that the underlying communication middleware could be swapped out. Therefore if folks needed a non-multicast way of connecting nodes, they could implement a custom middleware that works in their specific environment.
 
-In my use case, the entire robot will exist within my home network, so I can control how multicast works. I had envisioned running some nodes on cloud VMs which would not work without Herculean networking efforts, but I can easily mitigate that by running those nodes on any one of the old laptops I have around the house (or even the new Gaming/ML PC I'm planning to build).
+In my use case, the entire robot will exist within my home network, so I can control how multicast works. I had envisioned running some nodes on cloud VMs which would not work without Herculean networking efforts, but I can easily mitigate that by running those nodes on any one of the old laptops I have around the house.
 
 However, after some experimentation with the ROS2 tutorial nodes, I realized the deployment method I used with ROS1 and B2 won't work with ROS2 and R2B2. With ROS1 and B2, I ran each node in its own Docker container. This aligns with the container best practice of "one process per container". But I learned that multiple Docker containers on the same physical host can't receive multicast messages. 
 
@@ -26,7 +26,7 @@ Here's what I found out:
 
 It seems to be a side effect of how Docker routes network traffic through iptables (although admittedly I don't fully understand why it doesn't work). I even tried running all containers with `--network host` on the same host but the simple ROS2 publisher and subscriber nodes could not communicate with each other when in separate containers on the same host.
 
-There has been some discussion about how this could be done, but it involved very complex customization of the Docker networking environment, which I believe at that point it negates the isolation I'm getting by using Docker in the first place. Instead, I should simply run the nodes natively on the host and forget Docker altogether.
+There has been some discussion about how this could be done, but it involved very complex customization of the Docker networking environment, which I believe at that point it negates the isolation I'm getting by using Docker in the first place. In that case, I should simply run the nodes natively on the host and forget Docker altogether.
 
 But I do want to use Docker since it gives me a brand new and clean environment each time the container starts. It saves me a LOT of time compared to trying to figure out what change I made days or weeks ago to the host's environment which is now causing some problem with my nodes.
 
@@ -53,6 +53,7 @@ I will also have a private repo [`sheaffej/r2b2-private`](https://github.com/she
 R2B2 robot-level ROS2 repos:
 - [`sheaffej/r2b2`](https://github.com/sheaffej/r2b2)
 - [`sheaffej/r2b2-private`](https://github.com/sheaffej/r2b2-private) (Private repo)
+
 
 ## Plan of work for conversion to ROS2
 As of 15 Oct 2022, I have the Roboclaw driver and R2B2 base nodes converted over to ROS2, and both are passing their unit tests.
